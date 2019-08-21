@@ -14,11 +14,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.myhostel.IntroViewPagerAdapter;
-import com.example.myhostel.MainActivity;
-import com.example.myhostel.R;
-import com.example.myhostel.ScreenItem;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,7 +24,7 @@ public class IntroActivity extends AppCompatActivity {
     TabLayout tabIndicator;
     Button btnNext;
     int position = 0;
-    Button btnGetStarted;
+    Button btnGetStarted, btnwarden;
     Animation btnAnim;
     TextView tvSkip;
 
@@ -47,14 +42,14 @@ public class IntroActivity extends AppCompatActivity {
 
         // when this activity is about to be launch we need to check if its openened before or not
 
-        if (restorePrefData()) {
+        /*if (restorePrefData()) {
 
             Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(mainActivity);
             finish();
 
 
-        }
+        }*/
 
         setContentView(R.layout.activity_intro);
 
@@ -65,6 +60,7 @@ public class IntroActivity extends AppCompatActivity {
         // ini views
         btnNext = findViewById(R.id.btn_next);
         btnGetStarted = findViewById(R.id.btn_get_started);
+        btnwarden = findViewById(R.id.btn_warden);
         tabIndicator = findViewById(R.id.tab_indicator);
         btnAnim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.button_animation);
         tvSkip = findViewById(R.id.tv_skip);
@@ -150,17 +146,21 @@ public class IntroActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                //open main activity
-
                 Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(mainActivity);
-                // also we need to save a boolean value to storage so next time when the user run the app
-                // we could know that he is already checked the intro screen activity
-                // i'm going to use shared preferences to that process
                 savePrefsData();
                 finish();
 
 
+            }
+        });
+        btnwarden.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ma = new Intent(getApplicationContext(), LoginWarden.class);
+                startActivity(ma);
+              // savePrefsData();
+                finish();
             }
         });
 
@@ -201,11 +201,13 @@ public class IntroActivity extends AppCompatActivity {
 
         btnNext.setVisibility(View.INVISIBLE);
         btnGetStarted.setVisibility(View.VISIBLE);
+        btnwarden.setVisibility(View.VISIBLE);
         tvSkip.setVisibility(View.INVISIBLE);
         tabIndicator.setVisibility(View.INVISIBLE);
         // TODO : ADD an animation the getstarted button
         // setup animation
         btnGetStarted.setAnimation(btnAnim);
+        btnwarden.setAnimation(btnAnim);
 
 
     }
