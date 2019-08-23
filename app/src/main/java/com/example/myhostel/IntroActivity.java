@@ -19,7 +19,6 @@ import java.util.List;
 
 public class IntroActivity extends AppCompatActivity {
 
-    private ViewPager screenPager;
     IntroViewPagerAdapter introViewPagerAdapter;
     TabLayout tabIndicator;
     Button btnNext;
@@ -27,7 +26,7 @@ public class IntroActivity extends AppCompatActivity {
     Button btnGetStarted, btnwarden;
     Animation btnAnim;
     TextView tvSkip;
-
+    private ViewPager screenPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -159,7 +158,7 @@ public class IntroActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent ma = new Intent(getApplicationContext(), LoginWarden.class);
                 startActivity(ma);
-              // savePrefsData();
+                // savePrefsData();
                 finish();
             }
         });
