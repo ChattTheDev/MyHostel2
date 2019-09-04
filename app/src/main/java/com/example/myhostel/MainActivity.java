@@ -1,13 +1,10 @@
 package com.example.myhostel;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -30,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     Button reg;
     EditText e1, e2, e3;
     FirebaseAuth mAuth;
-    TextView member;
     FirebaseUser firebaseUser;
     FirebaseAuth.AuthStateListener authStateListener;
 
@@ -46,22 +42,6 @@ public class MainActivity extends AppCompatActivity {
         e1 = (EditText) findViewById(R.id.email1);
         e2 = (EditText) findViewById(R.id.pass1);
         e3 = (EditText) findViewById(R.id.editname);
-        member = (TextView) findViewById(R.id.alreadymember);
-
-
-
-
-
-
-
-
-        member.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, LoginPage.class);
-                startActivity(i);
-            }
-        });
 
 
         reg.setOnClickListener(new View.OnClickListener() {

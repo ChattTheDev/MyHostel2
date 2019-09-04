@@ -5,8 +5,8 @@ import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
@@ -49,8 +49,8 @@ public class WardenNoticeUpload extends AppCompatActivity {
         mEditTextFileName = (EditText) findViewById(R.id.edit_text_file_name);
         mImageView = (ImageView) findViewById(R.id.imageViewnotice);
 
-        mStorageRef = FirebaseStorage.getInstance().getReference("Uploaded_Notices");
-        mDatabaseRef = FirebaseDatabase.getInstance().getReference("Users");
+        mStorageRef = FirebaseStorage.getInstance().getReference("Uploads");
+        mDatabaseRef = FirebaseDatabase.getInstance().getReference("Uploads");
 
         mButtonChooseImage.setOnClickListener(new View.OnClickListener() {
             @Override
