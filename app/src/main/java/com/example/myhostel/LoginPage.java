@@ -72,6 +72,7 @@ public class LoginPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i);
             }
         });
 
@@ -131,7 +132,7 @@ public class LoginPage extends AppCompatActivity {
                         .addOnCompleteListener(LoginPage.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                progressDialog.hide();
+                                progressDialog.dismiss();
                                 if (task.isSuccessful()) {
                                     Toast.makeText(LoginPage.this, "Login Successfull!!", Toast.LENGTH_LONG).show();
 

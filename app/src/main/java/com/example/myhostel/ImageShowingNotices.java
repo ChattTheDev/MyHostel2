@@ -14,6 +14,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.core.Context;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,8 +33,7 @@ public class ImageShowingNotices extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_showing_notices);
-
-        mRecyclerView = findViewById(R.id.recyclerviewitems);
+        mRecyclerView = (RecyclerView)this.findViewById(R.id.recyclerviewitems);
         LinearLayoutManager manager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(manager);
         mRecyclerView.setHasFixedSize(true);

@@ -23,7 +23,7 @@ public class IntroActivity extends AppCompatActivity {
     TabLayout tabIndicator;
     Button btnNext;
     int position = 0;
-    Button btnGetStarted, btnwarden;
+    Button btnGetStarted, btnwarden, btnadmin;
     Animation btnAnim;
     TextView tvSkip;
     private ViewPager screenPager;
@@ -57,6 +57,7 @@ public class IntroActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         // ini views
+        btnadmin = findViewById(R.id.adminpanel);
         btnNext = findViewById(R.id.btn_next);
         btnGetStarted = findViewById(R.id.btn_get_started);
         btnwarden = findViewById(R.id.btn_warden);
@@ -163,6 +164,15 @@ public class IntroActivity extends AppCompatActivity {
             }
         });
 
+        btnadmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mai = new Intent(getApplicationContext(), LoginPage.class);
+                startActivity(mai);
+                finish();
+            }
+        });
+
         // skip button click listener
 
         tvSkip.setOnClickListener(new View.OnClickListener() {
@@ -201,12 +211,14 @@ public class IntroActivity extends AppCompatActivity {
         btnNext.setVisibility(View.INVISIBLE);
         btnGetStarted.setVisibility(View.VISIBLE);
         btnwarden.setVisibility(View.VISIBLE);
+        btnadmin.setVisibility(View.VISIBLE);
         tvSkip.setVisibility(View.INVISIBLE);
         tabIndicator.setVisibility(View.INVISIBLE);
         // TODO : ADD an animation the getstarted button
         // setup animation
         btnGetStarted.setAnimation(btnAnim);
         btnwarden.setAnimation(btnAnim);
+        btnadmin.setAnimation(btnAnim);
 
 
     }

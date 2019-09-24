@@ -32,22 +32,6 @@
         android:textColor="@color/gradient_start_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-    <Button
-        android:id="@+id/btn_warden"
-        android:layout_width="132dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/btn_gradient_style"
-        android:text="Welcome Sir"
-        android:textColor="#fff"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/btn_get_started"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_goneMarginBottom="12dp" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_indicator"
@@ -82,6 +66,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/btn_warden"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_gradient_style"
+        android:text="Welcome Sir"
+        android:textColor="#fff"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btn_get_started"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_goneMarginBottom="12dp" />
 
     <TextView
         android:textSize="16sp"
@@ -96,4 +96,17 @@
         android:text="Skip"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/adminpanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/buttonadmin"
+        android:text="Admin"
+        android:textColor="#fff"
+        android:textSize="10sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_skip" />
 </androidx.constraintlayout.widget.ConstraintLayout>
