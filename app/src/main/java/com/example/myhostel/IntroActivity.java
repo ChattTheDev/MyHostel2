@@ -146,7 +146,7 @@ public class IntroActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                Intent mainActivity = new Intent(getApplicationContext(), LoginPage.class);
+                Intent mainActivity = new Intent(getApplicationContext(), Splashscreen.class);
                 startActivity(mainActivity);
                 savePrefsData();
                 finish();
