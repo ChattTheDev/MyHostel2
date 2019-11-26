@@ -27,6 +27,7 @@ public class Main_DashBoard extends AppCompatActivity
     FirebaseAuth mAuth;
     FirebaseUser firebaseUser;
     Button noticeshow;
+    Button CompliantRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +52,16 @@ public class Main_DashBoard extends AppCompatActivity
 
         emailname = (TextView) hview.findViewById(R.id.textView);
         noticeshow = (Button)findViewById(R.id.noticeforstudents);
+        CompliantRegister = (Button)findViewById(R.id.registercomplaint);
+
+        CompliantRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), CompliantRegistration.class);
+                startActivity(i);
+            }
+        });
+
 
         noticeshow.setOnClickListener(new View.OnClickListener() {
             @Override

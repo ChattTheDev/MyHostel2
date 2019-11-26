@@ -129,6 +129,7 @@
                 android:src="@drawable/ic_reception"
                 android:layout_marginStart="32dp" />
             <Button
+                android:id="@+id/registercomplaint"
                 android:layout_width="100dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="14dp"
