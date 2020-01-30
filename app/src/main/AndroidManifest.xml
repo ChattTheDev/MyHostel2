@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CompliantRegistration"></activity>
+        <activity android:name=".Wardenviewcomplaints"></activity>
+        <activity android:name=".Messmenu" />
+        <activity android:name=".CompliantRegistration" />
         <activity android:name=".Splashscreen" />
         <activity android:name=".ImageShowingNotices" />
         <activity android:name=".PhoneVerification" />
